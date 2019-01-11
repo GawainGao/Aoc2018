@@ -1,0 +1,40 @@
+#a,b,r,c,d,e
+1 0 0 0 0 0
+
+
+0 addi 2 16 2    #r += 16    
+1 seti 1 1 1     b=1
+2 seti 1 8 5     e=1
+3 mulr 1 5 4     d=b*e
+4 eqrr 4 3 4     d=(d==c)
+5 addr 4 2 2     ip+=d
+6 addi 2 1 2     ip+=1
+7 addr 1 0 0     a+=b
+8 addi 5 1 5     e+=1
+9 gtrr 5 3 4     if e > c d = ?
+10addr 2 4 2     ip+=d
+11seti 2 0 2     ip=2
+12addi 1 1 1     b+=1
+13gtrr 1 3 4     if b > c d = ?
+14addr 4 2 2     ip+=d   !!!!!return
+15seti 1 1 2     ip=1    back to 1
+16mulr 2 2 2     ip = ip * ip
+17addi 3 2 3  #c += 2 
+18mulr 3 3 3  #c = c*c
+19mulr 2 3 3  #c = 19*c
+20muli 3 11 3 #c = 11*c
+21addi 4 7 4  #d += 7
+22mulr 4 2 4  #d *= 22
+23addi 4 6 4  #d += 6
+24addr 3 4 3  #c += 4
+25addr 2 0 2  #ip += a --------->part1 goto 1   part2 goto 27
+26seti 0 3 2  #ip = 0
+27setr 2 0 4  #d = 27
+28mulr 4 2 4  #d *= 28   d=756
+29addr 2 4 4  #d += 29   d=785
+30mulr 2 4 4  #d *= 30   d=23550
+31muli 4 14 4 #d *= 14   d=329700
+32mulr 4 2 4  #d *= 32   d=10550400
+33addr 3 4 3  #c += d    c=10551396
+34seti 0 4 0  #a = 0
+35seti 0 4 2  #ip = 0    goto1
