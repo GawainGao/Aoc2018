@@ -27,9 +27,14 @@ public class day52 {
                 }
             }
             min = (min > in.length())?in.length():min;
+
+
+
         }
         System.out.println(min);
     }
 }
 
 
+
+System.out.prin
